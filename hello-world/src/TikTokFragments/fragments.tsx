@@ -18,16 +18,20 @@ const PREGUNTA_CLIPS: FragmentClip[] = [
 export const PREGUNTA_DURATION = getFragmentDuration(PREGUNTA_CLIPS);
 export const Pregunta: React.FC = () => <Fragment clips={PREGUNTA_CLIPS} />;
 
-// "La comunidad": the direct ask — we need 10,000 users to launch.
+// "La comunidad": the direct ask — we need 10,000 users to launch. Cut
+// right after "...a fin de mes!!" finishes displaying and before the
+// following "Pero, para para" blooper caption starts (a ~0.1s window).
 const COMUNIDAD_CLIPS: FragmentClip[] = [
-  { src: "donnit-clip-comunidad.mp4", durationInFrames: 132 },
+  { src: "donnit-clip-comunidad.mp4", durationInFrames: 122 },
 ];
 export const COMUNIDAD_DURATION = getFragmentDuration(COMUNIDAD_CLIPS);
 export const Comunidad: React.FC = () => <Fragment clips={COMUNIDAD_CLIPS} />;
 
-// "El CTA": short reminder — already available, help us build it.
+// "El CTA": short reminder — already available, help us build it. Extended
+// to hold through the fist-bump payoff and the laugh reaction that follows
+// it, instead of cutting mid-gesture.
 const CTA_CLIPS: FragmentClip[] = [
-  { src: "donnit-clip-cta.mp4", durationInFrames: 126 },
+  { src: "donnit-clip-cta.mp4", durationInFrames: 171 },
 ];
 export const CTA_DURATION = getFragmentDuration(CTA_CLIPS);
 export const Cta: React.FC = () => <Fragment clips={CTA_CLIPS} />;
