@@ -5,5 +5,6 @@ export const FONT_FAMILY =
 export const COLORS = {
   background: "#FAF8F5", // Cream — alt surface
   textPrimary: "#1B4332", // Forest 700 — text · dark
-  accent: "#2D6A4F", // Deep 600 — outline
+  accent: "#2D6A4F", // Deep 600 — outline, for emphasis on light backgrounds
+  primary: "#6FBF6A", // Green 400 — PRIMARY, for emphasis on dark backgrounds
 };

@@ -1,6 +1,7 @@
 import "./index.css";
 import { Composition } from "remotion";
 import { EntregaVecinos } from "./EntregaVecinos/EntregaVecinos";
+import { FUSION_DEMO_DURATION, FusionDemo } from "./FusionDemo/FusionDemo";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
 
@@ -49,6 +50,17 @@ export const RemotionRoot: React.FC = () => {
         id="entrega-vecinos"
         component={EntregaVecinos}
         durationInFrames={180}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      {/* Demo: fuses clips from both uploaded reels with new synced
+      karaoke captions and a rebuilt on-brand outro. */}
+      <Composition
+        id="fusion-demo"
+        component={FusionDemo}
+        durationInFrames={FUSION_DEMO_DURATION}
         fps={30}
         width={1080}
         height={1920}
