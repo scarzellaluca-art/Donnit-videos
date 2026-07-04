@@ -4,6 +4,7 @@ import { EntregaVecinos } from "./EntregaVecinos/EntregaVecinos";
 import { FUSION_DEMO_DURATION, FusionDemo } from "./FusionDemo/FusionDemo";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
+import { TIKTOK_CUT_1_DURATION, TikTokCut1 } from "./TikTokCut1/TikTokCut1";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -61,6 +62,19 @@ export const RemotionRoot: React.FC = () => {
         id="fusion-demo"
         component={FusionDemo}
         durationInFrames={FUSION_DEMO_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      {/* TikTok-optimized re-cut: jump-cuts straight from the hook question
+      to the value-prop pitch, skipping all dead air/retakes, then closes
+      on the on-brand CTA. Keeps the source clip's own burned-in captions
+      as-is instead of overlaying new ones on top of them. */}
+      <Composition
+        id="tiktok-cut-1"
+        component={TikTokCut1}
+        durationInFrames={TIKTOK_CUT_1_DURATION}
         fps={30}
         width={1080}
         height={1920}
