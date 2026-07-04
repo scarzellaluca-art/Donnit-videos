@@ -5,6 +5,16 @@ import { FUSION_DEMO_DURATION, FusionDemo } from "./FusionDemo/FusionDemo";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
 import { TIKTOK_CUT_1_DURATION, TikTokCut1 } from "./TikTokCut1/TikTokCut1";
+import {
+  COMUNIDAD_DURATION,
+  Comunidad,
+  CTA_DURATION,
+  Cta,
+  PREGUNTA_DURATION,
+  Pregunta,
+  PROBLEMA_DURATION,
+  Problema,
+} from "./TikTokFragments/fragments";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -75,6 +85,41 @@ export const RemotionRoot: React.FC = () => {
         id="tiktok-cut-1"
         component={TikTokCut1}
         durationInFrames={TIKTOK_CUT_1_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      {/* Standalone TikTok fragments cut from the source footage, each
+      ending on the shared brand logo reveal (sped up to ~4s). */}
+      <Composition
+        id="fragment-1-problema"
+        component={Problema}
+        durationInFrames={PROBLEMA_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="fragment-2-pregunta"
+        component={Pregunta}
+        durationInFrames={PREGUNTA_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="fragment-3-comunidad"
+        component={Comunidad}
+        durationInFrames={COMUNIDAD_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="fragment-4-cta"
+        component={Cta}
+        durationInFrames={CTA_DURATION}
         fps={30}
         width={1080}
         height={1920}
