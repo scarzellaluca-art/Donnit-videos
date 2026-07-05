@@ -4,6 +4,10 @@ import { EntregaVecinos } from "./EntregaVecinos/EntregaVecinos";
 import { FUSION_DEMO_DURATION, FusionDemo } from "./FusionDemo/FusionDemo";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
+import {
+  RESCATE_SILLA_DURATION,
+  RescateSilla,
+} from "./RescateSilla/RescateSilla";
 import { TIKTOK_CUT_1_DURATION, TikTokCut1 } from "./TikTokCut1/TikTokCut1";
 import {
   COMUNIDAD_DURATION,
@@ -120,6 +124,18 @@ export const RemotionRoot: React.FC = () => {
         id="fragment-4-cta"
         component={Cta}
         durationInFrames={CTA_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      {/* First cut from genuinely raw, unedited camera-roll footage:
+      rescuing a chair from a junk truck as the visual metaphor for what
+      Donnit does. Real synced karaoke captions, no old captions to fight. */}
+      <Composition
+        id="rescate-silla"
+        component={RescateSilla}
+        durationInFrames={RESCATE_SILLA_DURATION}
         fps={30}
         width={1080}
         height={1920}
