@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, OffthreadVideo, Sequence, staticFile } from "remotion";
 import { KaraokeCaptions } from "../FusionDemo/KaraokeCaptions";
 import { BrandEnding, ENDING_DURATION } from "../TikTokFragments/BrandEnding";
+import { SeriesTitleCard } from "./SeriesTitleCard";
 import {
   CTA_WORDS,
   HOOK_A_WORDS,
@@ -12,12 +13,14 @@ import {
 // Real, unedited camera-roll footage: rescuing a chair from a junk truck as
 // the visual metaphor for what Donnit does. Jump-cuts within the hook
 // (silla-hook-a -> silla-hook-b) skip a dead pause in the same take.
-export const HOOK_A_DURATION = 114; // 3.8s @ 30fps
+export const TITLE_CARD_DURATION = 30; // 1.0s @ 30fps
+export const HOOK_A_DURATION = 114; // 3.8s
 export const HOOK_B_DURATION = 39; // 1.3s
 export const SOLUCION_DURATION = 150; // 5.0s
 export const CTA_DURATION = 78; // 2.6s
 
 export const RESCATE_SILLA_DURATION =
+  TITLE_CARD_DURATION +
   HOOK_A_DURATION +
   HOOK_B_DURATION +
   SOLUCION_DURATION +
@@ -27,7 +30,14 @@ export const RESCATE_SILLA_DURATION =
 export const RescateSilla: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
-      <Sequence durationInFrames={HOOK_A_DURATION}>
+      <Sequence durationInFrames={TITLE_CARD_DURATION}>
+        <SeriesTitleCard city="BARCELONA" freezeSrc="silla-hook-a.mp4" />
+      </Sequence>
+
+      <Sequence
+        from={TITLE_CARD_DURATION}
+        durationInFrames={HOOK_A_DURATION}
+      >
         <AbsoluteFill>
           <OffthreadVideo
             src={staticFile("silla-hook-a.mp4")}
@@ -37,7 +47,10 @@ export const RescateSilla: React.FC = () => {
         </AbsoluteFill>
       </Sequence>
 
-      <Sequence from={HOOK_A_DURATION} durationInFrames={HOOK_B_DURATION}>
+      <Sequence
+        from={TITLE_CARD_DURATION + HOOK_A_DURATION}
+        durationInFrames={HOOK_B_DURATION}
+      >
         <AbsoluteFill>
           <OffthreadVideo
             src={staticFile("silla-hook-b.mp4")}
@@ -48,7 +61,7 @@ export const RescateSilla: React.FC = () => {
       </Sequence>
 
       <Sequence
-        from={HOOK_A_DURATION + HOOK_B_DURATION}
+        from={TITLE_CARD_DURATION + HOOK_A_DURATION + HOOK_B_DURATION}
         durationInFrames={SOLUCION_DURATION}
       >
         <AbsoluteFill>
@@ -61,7 +74,12 @@ export const RescateSilla: React.FC = () => {
       </Sequence>
 
       <Sequence
-        from={HOOK_A_DURATION + HOOK_B_DURATION + SOLUCION_DURATION}
+        from={
+          TITLE_CARD_DURATION +
+          HOOK_A_DURATION +
+          HOOK_B_DURATION +
+          SOLUCION_DURATION
+        }
         durationInFrames={CTA_DURATION}
       >
         <AbsoluteFill>
@@ -75,7 +93,11 @@ export const RescateSilla: React.FC = () => {
 
       <Sequence
         from={
-          HOOK_A_DURATION + HOOK_B_DURATION + SOLUCION_DURATION + CTA_DURATION
+          TITLE_CARD_DURATION +
+          HOOK_A_DURATION +
+          HOOK_B_DURATION +
+          SOLUCION_DURATION +
+          CTA_DURATION
         }
         durationInFrames={ENDING_DURATION}
       >
