@@ -4,10 +4,10 @@
 App para **dar y encontrar objetos gratis** entre vecinos en Barcelona (economía circular / reuso). Público objetivo: Barcelona y Europa, 18–50 años. Canal principal: Instagram Reels (también se adapta a TikTok, LinkedIn, X bajo pedido). Tono: auténtico, vecinal, humor cotidiano — nunca spot publicitario sobreproducido.
 
 ## Mecánica narrativa base
-Toda pieza dramatiza "dar → encontrar" mostrándolo, no explicándolo: alguien deja un objeto (p. ej. un ventilador en el rellano de un edificio), otro vecino lo encuentra y se lo lleva. La frase de marca ("Tenemos una app para dar y encontrar objetos en Barcelona") se dice una sola vez, al final, a cámara.
+Toda pieza dramatiza "dar → encontrar" mostrándolo, no explicándolo: alguien deja un objeto (p. ej. un ventilador junto al ascensor de un edificio), otro vecino lo encuentra y se lo lleva. La frase de marca ("Tenemos una app para dar y encontrar objetos en Barcelona") se dice una sola vez, al final, a cámara.
 
 ## Estilo de edición de referencia (catálogo técnico)
-Extraído fotograma a fotograma + audio de un video editado a mano por el usuario en CapCut (`83cac184-WhatsApp_Video_20260708_at_17.43.10.mp4`, 28.6s) usando el mismo material en bruto de las azoteas/rellano. Aplicar este catálogo por defecto en toda edición futura, salvo instrucción contraria:
+Extraído fotograma a fotograma + audio de un video editado a mano por el usuario en CapCut (`83cac184-WhatsApp_Video_20260708_at_17.43.10.mp4`, 28.6s) usando el mismo material en bruto de las azoteas/ascensor. Aplicar este catálogo por defecto en toda edición futura, salvo instrucción contraria:
 
 1. **Recortes**: cortes secos entre escenas, sin fundidos (transiciones de fade evitar salvo pedido explícito).
 2. **Congelados (freeze frame)**: en CapCut, seleccionar el clip → ⋯ → "Congelar fotograma". Duración ajustable arrastrando el borde del segmento nuevo. Se usa para sostener frases clave o el cierre de marca (1.5–2s típico).
