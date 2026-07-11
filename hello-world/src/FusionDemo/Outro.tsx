@@ -7,7 +7,7 @@ export const Outro: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: COLORS.textPrimary,
+        backgroundColor: COLORS.background,
         fontFamily: FONT_FAMILY,
         justifyContent: "center",
         alignItems: "center",
@@ -27,7 +27,7 @@ export const Outro: React.FC = () => {
             style={{
               fontSize: 140,
               fontWeight: 800,
-              color: COLORS.background,
+              color: COLORS.textPrimary,
               letterSpacing: 3,
             }}
           >
@@ -40,7 +40,7 @@ export const Outro: React.FC = () => {
             style={{
               fontSize: 52,
               fontWeight: 500,
-              color: COLORS.background,
+              color: COLORS.textPrimary,
               maxWidth: 780,
               display: "inline-block",
               lineHeight: 1.3,
@@ -55,7 +55,7 @@ export const Outro: React.FC = () => {
             style={{
               fontSize: 60,
               fontWeight: 900,
-              color: COLORS.primary,
+              color: COLORS.donate,
             }}
           >
             Ayúdanos a construirlo.

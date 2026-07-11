@@ -13,7 +13,7 @@ export const IntroFlash: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: COLORS.textPrimary,
+        backgroundColor: COLORS.background,
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -25,7 +25,7 @@ export const IntroFlash: React.FC = () => {
           fontSize: 150,
           fontWeight: 800,
           letterSpacing: 4,
-          color: COLORS.background,
+          color: COLORS.textPrimary,
         }}
       >
         DONNIT

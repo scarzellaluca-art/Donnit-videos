@@ -74,7 +74,7 @@ export const EntregaVecinos: React.FC = () => {
             style={{
               fontSize: 132,
               fontWeight: 900,
-              color: COLORS.accent,
+              color: COLORS.donate,
               letterSpacing: 2,
             }}
           >

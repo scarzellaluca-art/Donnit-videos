@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill, OffthreadVideo, Sequence, staticFile } from "remotion";
+import { COLORS } from "../EntregaVecinos/constants";
 import { KaraokeCaptions } from "../FusionDemo/KaraokeCaptions";
 import { BrandEnding, ENDING_DURATION } from "../TikTokFragments/BrandEnding";
 import { SeriesTitleCard } from "./SeriesTitleCard";
@@ -31,7 +32,11 @@ export const RescateSilla: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       <Sequence durationInFrames={TITLE_CARD_DURATION}>
-        <SeriesTitleCard city="BARCELONA" freezeSrc="silla-hook-a.mp4" />
+        <SeriesTitleCard
+          city="BARCELONA"
+          freezeSrc="silla-hook-a.mp4"
+          accentColor={COLORS.donate}
+        />
       </Sequence>
 
       <Sequence
@@ -43,7 +48,7 @@ export const RescateSilla: React.FC = () => {
             src={staticFile("silla-hook-a.mp4")}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <KaraokeCaptions words={HOOK_A_WORDS} />
+          <KaraokeCaptions words={HOOK_A_WORDS} accentColor={COLORS.donate} />
         </AbsoluteFill>
       </Sequence>
 
@@ -56,7 +61,7 @@ export const RescateSilla: React.FC = () => {
             src={staticFile("silla-hook-b.mp4")}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <KaraokeCaptions words={HOOK_B_WORDS} />
+          <KaraokeCaptions words={HOOK_B_WORDS} accentColor={COLORS.donate} />
         </AbsoluteFill>
       </Sequence>
 
@@ -69,7 +74,7 @@ export const RescateSilla: React.FC = () => {
             src={staticFile("silla-solucion.mp4")}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <KaraokeCaptions words={SOLUCION_WORDS} />
+          <KaraokeCaptions words={SOLUCION_WORDS} accentColor={COLORS.donate} />
         </AbsoluteFill>
       </Sequence>
 
@@ -87,7 +92,7 @@ export const RescateSilla: React.FC = () => {
             src={staticFile("silla-cta.mp4")}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <KaraokeCaptions words={CTA_WORDS} />
+          <KaraokeCaptions words={CTA_WORDS} accentColor={COLORS.donate} />
         </AbsoluteFill>
       </Sequence>
 

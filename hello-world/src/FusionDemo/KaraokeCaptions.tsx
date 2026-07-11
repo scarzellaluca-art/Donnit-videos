@@ -1,6 +1,6 @@
 import React from "react";
 import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS, FONT_FAMILY } from "../EntregaVecinos/constants";
+import { FONT_FAMILY } from "../EntregaVecinos/constants";
 import { groupWordsIntoLines } from "./group-words";
 import type { Word } from "./words";
 
@@ -12,7 +12,10 @@ const POP_DURATION_SECONDS = 0.15;
 
 export const KaraokeCaptions: React.FC<{
   readonly words: Word[];
-}> = ({ words }) => {
+  // COLORS.donate or COLORS.rent depending on what the clip is about — never
+  // mix the two within the same video.
+  readonly accentColor: string;
+}> = ({ words, accentColor }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const currentTime = frame / fps;
@@ -67,7 +70,7 @@ export const KaraokeCaptions: React.FC<{
                 fontSize: 68,
                 fontWeight: 800,
                 lineHeight: 1.25,
-                color: isActive ? COLORS.primary : "#FFFFFF",
+                color: isActive ? accentColor : "#FFFFFF",
                 WebkitTextStroke: "2.5px #10231A",
                 textShadow: "0 3px 10px rgba(0,0,0,0.45)",
                 display: "inline-block",

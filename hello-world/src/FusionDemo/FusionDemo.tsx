@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill, OffthreadVideo, Sequence, staticFile } from "remotion";
+import { COLORS } from "../EntregaVecinos/constants";
 import { IntroFlash } from "./IntroFlash";
 import { KaraokeCaptions } from "./KaraokeCaptions";
 import { Outro } from "./Outro";
@@ -26,7 +27,7 @@ export const FusionDemo: React.FC = () => {
             src={staticFile("donnit-clip-a.mp4")}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <KaraokeCaptions words={CLIP_A_WORDS} />
+          <KaraokeCaptions words={CLIP_A_WORDS} accentColor={COLORS.donate} />
         </AbsoluteFill>
       </Sequence>
 
@@ -39,7 +40,7 @@ export const FusionDemo: React.FC = () => {
             src={staticFile("donnit-clip-b.mp4")}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <KaraokeCaptions words={CLIP_B_WORDS} />
+          <KaraokeCaptions words={CLIP_B_WORDS} accentColor={COLORS.donate} />
         </AbsoluteFill>
       </Sequence>
 

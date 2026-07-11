@@ -10,7 +10,9 @@ import { COLORS, FONT_FAMILY } from "../EntregaVecinos/constants";
 export const SeriesTitleCard: React.FC<{
   readonly city: string;
   readonly freezeSrc: string;
-}> = ({ city, freezeSrc }) => {
+  // COLORS.donate or COLORS.rent depending on what the episode is about.
+  readonly accentColor: string;
+}> = ({ city, freezeSrc, accentColor }) => {
   return (
     <AbsoluteFill>
       <Freeze frame={5}>
@@ -19,7 +21,9 @@ export const SeriesTitleCard: React.FC<{
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </Freeze>
-      <AbsoluteFill style={{ backgroundColor: "rgba(16,35,26,0.55)" }} />
+      {/* A light scrim, not a dark one — brand guidance is a bright,
+      daylight look, never dark or cold. */}
+      <AbsoluteFill style={{ backgroundColor: "rgba(255,255,255,0.4)" }} />
       <AbsoluteFill
         style={{
           justifyContent: "center",
@@ -40,7 +44,8 @@ export const SeriesTitleCard: React.FC<{
               fontStyle: "italic",
               fontWeight: 600,
               fontSize: 64,
-              color: COLORS.primary,
+              color: accentColor,
+              textShadow: "0 2px 14px rgba(255,255,255,0.85)",
             }}
           >
             Donnit
@@ -51,7 +56,8 @@ export const SeriesTitleCard: React.FC<{
               fontWeight: 800,
               fontSize: 100,
               letterSpacing: 2,
-              color: COLORS.background,
+              color: COLORS.textPrimary,
+              textShadow: "0 2px 14px rgba(255,255,255,0.85)",
             }}
           >
             {city}
